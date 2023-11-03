@@ -6,7 +6,7 @@ const welcome = `<!DOCTYPE html>
   <body>
     <h1>Welcome to ⏳tzwiz.io⏳!</h1>
     <p>This website gives you a simple way to get Open Graph meta data dynamically to help convert timezones within Slack messages</p>
-    <p>Example message: <code>I'll be out for an appointment at tzwiz.io/pm/est/3</code></p>
+    <p>Example message: <code>I'll be out for an appointment at http://tzwiz.io/1300-5</code></p>
   </body>
 </html>`;
 
