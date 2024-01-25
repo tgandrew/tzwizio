@@ -1,7 +1,7 @@
 import * as moment from 'moment-timezone';
 export async function get_og_html_from_path(path: string): Promise<string> {
 	const rawTime = path.replace(/\//, '');
-	const regex = new RegExp('^([12]?[0-9])([0-5][0-9])([+-][12]?[0-9])$');
+	const regex = new RegExp('^([012]?[0-9])([0-5][0-9])([+-][12]?[0-9])$');
 
 	const match = regex.exec(rawTime);
 
@@ -24,8 +24,9 @@ export async function get_og_html_from_path(path: string): Promise<string> {
 		const ptTime = time.tz('America/Los_Angeles').format('hh:mm a z');
 		const etTime = time.tz('America/New_York').format('hh:mm a z');
 		const utcTime = time.utc().format('hh:mm a z');
+		const shTime = time.tz('Asia/Shanghai').format('hh:mm a z');
 
-		timeInfo = `${ptTime}\n ${etTime}\n${utcTime}`;
+		timeInfo = `${ptTime}\n${etTime}\n${utcTime}\n${shTime}`;
 	}
 
 	const html = `<!DOCTYPE html>
