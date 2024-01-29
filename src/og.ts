@@ -32,6 +32,7 @@ export async function get_og_html_from_path(path: string): Promise<string> {
 	const html = `<!DOCTYPE html>
     <html>
     <head>
+	    <meta property="og:title" content=":watch::mage: TimeZone Wizard [tzwiz.io]" />
         <meta property="og:description" content="${timeInfo}" />
     </head>
     <body>
