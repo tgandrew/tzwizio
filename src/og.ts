@@ -23,16 +23,15 @@ export async function get_og_html_from_path(path: string): Promise<string> {
 
 		const ptTime = time.tz('America/Los_Angeles').format('hh:mm a z');
 		const etTime = time.tz('America/New_York').format('hh:mm a z');
-		const utcTime = time.utc().format('hh:mm a z');
-		const shTime = time.tz('Asia/Shanghai').format('hh:mm a z');
 
-		timeInfo = `${ptTime}\n${etTime}\n${utcTime}\n${shTime}`;
+
+		timeInfo = `${ptTime}\n${etTime}\n`;
 	}
 
 	const html = `<!DOCTYPE html>
     <html>
     <head>
-	    <meta property="og:title" content=":watch::mage: TimeZone Wizard [tzwiz.io]" />
+        <meta property="og:title" content="${timeInfo}" />
         <meta property="og:description" content="${timeInfo}" />
     </head>
     <body>
